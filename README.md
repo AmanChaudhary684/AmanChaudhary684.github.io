@@ -42,10 +42,10 @@ Collection of DSA problems solved with both brute force and optimized solutions.
 
 ## 🛠️ Skills
 
-- **Programming Languages:** C++, Java, Python, JavaScript
-- **Data Structures & Algorithms:** Arrays, Linked Lists, Trees, Graphs, Dynamic Programming
+- **Programming Languages:** C++, Java, Python
+- **Data Structures & Algorithms:** Arrays, Linked Lists, Trees, Graphs, Dynamic Programming   # (Learning)
 - **Web Development:** HTML, CSS, JavaScript, React (Learning)
-- **Tools & Platforms:** Git, GitHub, VS Code, Linux
+- **Tools & Platforms:** Git, GitHub, VS Code
 
 ## 📚 Currently Learning
 
@@ -56,7 +56,7 @@ Collection of DSA problems solved with both brute force and optimized solutions.
 
 ## 🎓 Education
 
-**Bachelor of Technology - Computer Science**
+**Bachelor of Technology - Computer Science****(Bennett University)**
 - Currently in 2nd Year
 - Focus Areas: Data Structures, Algorithms, Software Development, Web Technologies
 
@@ -66,26 +66,6 @@ Collection of DSA problems solved with both brute force and optimized solutions.
 - **LinkedIn:** [Aman Chaudhary](https://www.linkedin.com/in/aman-chaudhary-426426336)
 - **Portfolio:** [amanchaudhary684.github.io](https://amanchaudhary684.github.io/)
 
-## 🔄 How to Update the Portfolio
-
-1. Clone this repository
-2. Edit `index.html` to add new projects or update content
-3. Commit and push changes to the `main` branch
-4. GitHub Pages will automatically redeploy (takes 1-2 minutes)
-
-### Adding a New Project
-
-Find the `<div class="projects-grid">` section and add:
-```html
-<div class="project-card">
-    <h3>Your Project Name</h3>
-    <p>Description of what it does and technologies used.</p>
-    <div class="project-links">
-        <a href="https://your-demo-link.com" target="_blank">Live Demo</a>
-        <a href="https://github.com/AmanChaudhary684/repo-name" target="_blank">GitHub</a>
-    </div>
-</div>
-```
 
 ## 📝 License
 
