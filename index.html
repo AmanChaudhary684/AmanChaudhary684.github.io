@@ -11,610 +11,606 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #1a1a1a;
-            --bg-card: #151515;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --accent: #00d9ff;
-            --accent-hover: #00b8d4;
-            --border: #2a2a2a;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
         }
 
-        /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            padding: 10px 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-        }
-
-        .theme-toggle:hover {
-            border-color: var(--accent);
-        }
-
-        .theme-toggle::before {
-            content: '●';
-            color: var(--accent);
-            font-size: 12px;
-        }
-
-        /* Header Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 0;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1400px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 30px 50px;
+            background: white;
         }
 
         .logo {
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .logo span {
+            color: #667eea;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 35px;
         }
 
         nav a {
-            color: var(--text-secondary);
+            color: #666;
             text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.95rem;
             transition: color 0.3s;
-            position: relative;
         }
 
         nav a:hover {
-            color: var(--text-primary);
+            color: #667eea;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent);
-            transition: width 0.3s;
+        .cta-btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        nav a:hover::after {
-            width: 100%;
+        .cta-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 120px 40px 80px;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 1400px;
-            width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            gap: 60px;
+            padding: 80px 50px;
             align-items: center;
+            background: white;
         }
 
         .hero-text h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            letter-spacing: -2px;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 400;
         }
 
         .hero-text h2 {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            margin-bottom: 30px;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text h2 span {
+            color: #667eea;
         }
 
         .hero-text p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
+            color: #666;
             line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1rem;
         }
 
         .hero-buttons {
             display: flex;
             gap: 20px;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-            border: 1px solid var(--border);
+            margin-bottom: 30px;
         }
 
         .btn-primary {
-            background: var(--accent);
-            color: var(--bg-primary);
-            border-color: var(--accent);
-            font-weight: 600;
+            background: #3d5a80;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-primary:hover {
-            background: var(--accent-hover);
+            background: #2d4560;
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--text-primary);
+            color: #3d5a80;
+            padding: 15px 35px;
+            border: 2px solid #3d5a80;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-secondary:hover {
-            border-color: var(--accent);
-            background: rgba(0, 217, 255, 0.1);
+            background: #3d5a80;
+            color: white;
         }
 
-        .hero-image {
-            position: relative;
+        .social-links {
+            display: flex;
+            gap: 15px;
         }
 
-        .image-placeholder {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
-            border: 1px solid var(--border);
-            border-radius: 8px;
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.1rem;
         }
 
-        .image-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .social-icon:hover {
+            border-color: #667eea;
+            color: #667eea;
+            transform: translateY(-3px);
+        }
+
+        /* Profile Image */
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .profile-image {
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
-            animation: shine 3s infinite;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #f0f0f0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes shine {
-            to { left: 100%; }
+        .upload-placeholder {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            border: 8px solid #f0f0f0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
         }
 
-        /* Section Styles */
+        .upload-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        .upload-text {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        #imageUpload {
+            display: none;
+        }
+
+        /* Sections */
         section {
-            padding: 120px 40px;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 80px 50px;
+            background: white;
         }
 
         .section-header {
+            text-align: center;
             margin-bottom: 60px;
         }
 
         .section-label {
-            font-size: 0.85rem;
-            color: var(--accent);
+            color: #667eea;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            color: #333;
             font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .section-description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
+            color: #666;
             max-width: 700px;
+            margin: 0 auto;
             line-height: 1.8;
         }
 
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
         .skill-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            padding: 40px;
-            border-radius: 8px;
+            background: #f8f9fa;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
             transition: all 0.3s;
         }
 
         .skill-card:hover {
-            border-color: var(--accent);
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .skill-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--text-primary);
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
         }
 
         .skill-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
+            color: #666;
+            line-height: 1.6;
         }
 
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
         }
 
         .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
+            background: #f8f9fa;
+            border-radius: 15px;
             overflow: hidden;
             transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
+            border: 2px solid transparent;
         }
 
         .project-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
         }
 
-        .project-image {
+        .project-icon {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
-            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-secondary);
-            font-size: 3rem;
+            font-size: 4rem;
+            color: white;
         }
 
         .project-content {
             padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
         }
 
         .project-content h3 {
-            font-size: 1.5rem;
+            color: #333;
             margin-bottom: 15px;
-            color: var(--text-primary);
+            font-size: 1.4rem;
         }
 
         .project-content p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 25px;
-            flex-grow: 1;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
         }
 
         .project-links {
             display: flex;
-            gap: 15px;
+            gap: 12px;
         }
 
         .project-link {
-            padding: 10px 25px;
-            background: transparent;
-            color: var(--text-primary);
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
             text-decoration: none;
-            border: 1px solid var(--border);
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             transition: all 0.3s;
         }
 
         .project-link:hover {
-            border-color: var(--accent);
-            background: rgba(0, 217, 255, 0.1);
+            background: #764ba2;
         }
 
-        /* Education Section */
+        /* Education */
         .education-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+            background: #f8f9fa;
             padding: 40px;
-            border-radius: 8px;
-            margin-top: 40px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
         }
 
         .education-card h3 {
+            color: #333;
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: var(--text-primary);
         }
 
         .education-card p {
-            color: var(--text-secondary);
+            color: #666;
             line-height: 1.8;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .education-card strong {
-            color: var(--text-primary);
+            color: #333;
         }
 
         /* Footer */
         footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border);
-            padding: 60px 40px;
+            background: #f8f9fa;
+            padding: 40px;
             text-align: center;
+            color: #666;
         }
 
         footer p {
-            color: var(--text-secondary);
-            margin-bottom: 10px;
+            margin: 5px 0;
         }
 
         .footer-note {
             margin-top: 40px;
             font-style: italic;
-            color: var(--text-secondary);
-        }
-
-        /* Light Theme */
-        body.light-theme {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f5f5f5;
-            --bg-card: #fafafa;
-            --text-primary: #000000;
-            --text-secondary: #666666;
-            --accent: #0066cc;
-            --accent-hover: #0052a3;
-            --border: #e0e0e0;
+            color: #999;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-content {
+        @media (max-width: 968px) {
+            .hero {
                 grid-template-columns: 1fr;
-                gap: 60px;
+                text-align: center;
             }
 
-            .hero-text h1 {
-                font-size: 3rem;
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .profile-wrapper {
+                width: 300px;
+                height: 300px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 20px;
             }
 
             nav ul {
-                gap: 25px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
 
-        @media (max-width: 768px) {
-            nav {
-                padding: 0 20px;
+        @media (max-width: 640px) {
+            body {
+                padding: 20px 10px;
             }
 
-            nav ul {
-                display: none;
+            .container {
+                border-radius: 20px;
             }
 
-            .hero {
-                padding: 100px 20px 60px;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
+            header, .hero, section {
+                padding: 30px 25px;
             }
 
             .hero-text h2 {
-                font-size: 1.2rem;
+                font-size: 2.5rem;
             }
 
             .hero-buttons {
                 flex-direction: column;
             }
 
-            .btn {
-                text-align: center;
-            }
-
-            section {
-                padding: 80px 20px;
+            .profile-wrapper {
+                width: 250px;
+                height: 250px;
             }
 
             .section-title {
                 font-size: 2rem;
             }
 
-            .projects-grid,
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .theme-toggle {
-                top: 10px;
-                right: 10px;
+            nav ul {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="theme-toggle" onclick="toggleTheme()">Dark mode</div>
+    <div class="container">
+        <header>
+            <div class="logo">AMAN<span>.</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </nav>
+            <a href="https://www.linkedin.com/in/aman-chaudhary-426426336" target="_blank" class="cta-btn">Let's Talk</a>
+        </header>
 
-    <header>
-        <nav>
-            <div class="logo">Aman Chaudhary</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
+        <section id="home" class="hero">
             <div class="hero-text">
-                <h1>I AM A COMPUTER SCIENCE STUDENT<br>& DSA ENTHUSIAST</h1>
-                <h2>Building Skills & Creating Solutions</h2>
-                <p>Currently in 2nd year BTech, focused on mastering Data Structures and Algorithms while building practical projects. I enjoy solving problems and creating solutions that make a difference.</p>
+                <h1>Hi, I'm Aman Chaudhary!</h1>
+                <h2>COMPUTER SCIENCE <span>STUDENT</span></h2>
+                <p>I'm a passionate 2nd year BTech student focused on mastering Data Structures and Algorithms while building practical projects. I enjoy solving problems and creating solutions that make a difference.</p>
+                
                 <div class="hero-buttons">
-                    <a href="https://github.com/AmanChaudhary684" target="_blank" class="btn btn-primary">GitHub</a>
-                    <a href="https://www.linkedin.com/in/aman-chaudhary-426426336" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                    <a href="#projects" class="btn-primary">
+                        <span>PROJECTS</span>
+                        <span>→</span>
+                    </a>
+                    <a href="https://github.com/AmanChaudhary684" target="_blank" class="btn-secondary">
+                        <span>GITHUB</span>
+                        <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/AmanChaudhary684" target="_blank" class="social-icon" title="GitHub">G</a>
+                    <a href="https://www.linkedin.com/in/aman-chaudhary-426426336" target="_blank" class="social-icon" title="LinkedIn">in</a>
                 </div>
             </div>
+
             <div class="hero-image">
-                <div class="image-placeholder">
-                    <span style="font-size: 5rem; color: var(--text-secondary);">{ }</span>
+                <div class="profile-wrapper">
+                    <div class="upload-placeholder" onclick="document.getElementById('imageUpload').click()">
+                        <div>👤</div>
+                        <div class="upload-text">Click to upload photo</div>
+                    </div>
+                    <input type="file" id="imageUpload" accept="image/*">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about">
-        <div class="section-header">
-            <div class="section-label">About Me</div>
-            <h2 class="section-title">Passionate About Technology</h2>
-            <p class="section-description">
-                I'm a passionate computer science student currently pursuing my BTech degree. I'm focused on mastering Data Structures and Algorithms while building practical projects to apply my knowledge. I enjoy solving problems and creating solutions that make a difference. Currently learning DSA patterns and working on various projects to strengthen my programming fundamentals and software development skills.
-            </p>
-        </div>
-    </section>
+        <section id="about">
+            <div class="section-header">
+                <div class="section-label">ABOUT ME</div>
+                <h2 class="section-title">Passionate About Technology</h2>
+                <p class="section-description">
+                    I'm a passionate computer science student currently pursuing my BTech degree. I'm focused on mastering Data Structures and Algorithms while building practical projects to apply my knowledge. Currently learning DSA patterns and working on various projects to strengthen my programming fundamentals and software development skills.
+                </p>
+            </div>
+        </section>
 
-    <section id="skills">
-        <div class="section-header">
-            <div class="section-label">Skills</div>
-            <h2 class="section-title">What I Know</h2>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Programming Languages</h3>
-                <p>C++, Java, Python, JavaScript</p>
+        <section id="skills">
+            <div class="section-header">
+                <div class="section-label">SKILLS</div>
+                <h2 class="section-title">What I Know</h2>
             </div>
-            <div class="skill-card">
-                <h3>Data Structures & Algorithms</h3>
-                <p>Arrays, Linked Lists, Trees, Graphs, Dynamic Programming</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>C++, Java, Python, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Arrays, Linked Lists, Trees, Graphs, Dynamic Programming</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React (Learning)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Platforms</h3>
+                    <p>Git, GitHub, VS Code, Linux</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>Web Development</h3>
-                <p>HTML, CSS, JavaScript, React (Learning)</p>
-            </div>
-            <div class="skill-card">
-                <h3>Tools & Platforms</h3>
-                <p>Git, GitHub, VS Code, Linux</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <div class="section-header">
-            <div class="section-label">Projects</div>
-            <h2 class="section-title">My Work</h2>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🚗</div>
-                <div class="project-content">
-                    <h3>License Plate Detector</h3>
-                    <p>An intelligent system that detects and recognizes license plates from images using computer vision and machine learning techniques.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/AmanChaudhary684/License_Plate_Detector" target="_blank" class="project-link">GitHub</a>
+        <section id="projects">
+            <div class="section-header">
+                <div class="section-label">PROJECTS</div>
+                <h2 class="section-title">My Work</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🚗</div>
+                    <div class="project-content">
+                        <h3>License Plate Detector</h3>
+                        <p>An intelligent system that detects and recognizes license plates from images using computer vision and machine learning techniques.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanChaudhary684/License_Plate_Detector" target="_blank" class="project-link">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">💻</div>
+                    <div class="project-content">
+                        <h3>DSA Problem Solver</h3>
+                        <p>Collection of 50+ DSA problems solved with both brute force and optimized solutions. Organized by topics including Arrays, Strings, Trees, and more.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/AmanChaudhary684/DSA_Practice" target="_blank" class="project-link">GitHub →</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="project-card">
-                <div class="project-image">💻</div>
-                <div class="project-content">
-                    <h3>DSA Problem Solver</h3>
-                    <p>Collection of 50+ DSA problems solved with both brute force and optimized solutions. Organized by topics including Arrays, Strings, Trees, Dynamic Programming, and more.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/AmanChaudhary684/DSA_Practice" target="_blank" class="project-link">GitHub</a>
-                    </div>
-                </div>
+            <p class="footer-note">More projects coming soon as I continue learning and building! I am learning DSA patterns so I will upload my brute and optimized solutions.</p>
+        </section>
+
+        <section id="education">
+            <div class="section-header">
+                <div class="section-label">EDUCATION</div>
+                <h2 class="section-title">Academic Background</h2>
             </div>
-        </div>
-        <p class="footer-note">More projects coming soon as I continue learning and building! Also, I am learning DSA patterns so I will upload my brute and optimized solutions.</p>
-    </section>
+            <div class="education-card">
+                <h3>Bachelor of Technology - Computer Science</h3>
+                <p><strong>Current Status:</strong> 2nd Year</p>
+                <p><strong>Focus Areas:</strong> Data Structures, Algorithms, Software Development, Web Technologies</p>
+            </div>
+        </section>
 
-    <section id="education">
-        <div class="section-header">
-            <div class="section-label">Education</div>
-            <h2 class="section-title">Academic Background</h2>
-        </div>
-        <div class="education-card">
-            <h3>Bachelor of Technology - Computer Science</h3>
-            <p><strong>Current Status:</strong> 2nd Year</p>
-            <p><strong>Focus Areas:</strong> Data Structures, Algorithms, Software Development, Web Technologies</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Aman Chaudhary. All rights reserved.</p>
-        <p>Built with HTML, CSS, and JavaScript</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Aman Chaudhary. All rights reserved.</p>
+            <p>Built with HTML, CSS, and JavaScript</p>
+        </footer>
+    </div>
 
     <script>
         // Smooth scrolling
@@ -631,17 +627,26 @@
             });
         });
 
-        // Theme toggle
-        function toggleTheme() {
-            document.body.classList.toggle('light-theme');
-            const toggle = document.querySelector('.theme-toggle');
-            if (document.body.classList.contains('light-theme')) {
-                toggle.textContent = '● Light mode';
-            } else {
-                toggle.textContent = '● Dark mode';
+        // Image upload functionality
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const placeholder = document.querySelector('.upload-placeholder');
+                    placeholder.innerHTML = '';
+                    placeholder.style.background = 'none';
+                    
+                    const img = document.createElement('img');
+                    img.src = event.target.result;
+                    img.className = 'profile-image';
+                    img.style.border = 'none';
+                    
+                    placeholder.appendChild(img);
+                };
+                reader.readAsDataURL(file);
             }
-        }
+        });
     </script>
 </body>
 </html>
-
