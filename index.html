@@ -113,15 +113,22 @@
         /* HERO */
         .hero {
             min-height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            justify-content: center;
             align-items: center;
             padding: 140px 60px 80px;
-            gap: 60px;
             position: relative;
         }
 
-        .hero-left { position: relative; }
+        .hero-left {
+            position: relative;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            justify-content: center;
+        }
 
         .hero-eyebrow {
             font-family: 'Space Mono', monospace;
@@ -164,8 +171,11 @@
             font-size: 1rem;
             color: var(--muted);
             margin-bottom: 30px;
-            border-left: 3px solid var(--accent);
-            padding-left: 16px;
+            border-left: none;
+            border-top: 3px solid var(--accent);
+            border-bottom: 3px solid var(--accent);
+            padding: 8px 0;
+            display: inline-block;
         }
 
         .hero-desc {
@@ -173,10 +183,10 @@
             line-height: 1.8;
             font-size: 1rem;
             max-width: 480px;
-            margin-bottom: 40px;
+            margin: 0 auto 40px;
         }
 
-        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 
         .btn-glitch {
             position: relative;
@@ -685,32 +695,7 @@
             </div>
         </div>
 
-        <div class="hero-right reveal">
-            <div class="code-window">
-                <div class="code-header">
-                    <div class="dot dot-r"></div>
-                    <div class="dot dot-y"></div>
-                    <div class="dot dot-g"></div>
-                    <span class="code-title">aman.tsx</span>
-                </div>
-                <div class="code-body">
-                    <div class="code-line"><span class="ln">1</span><span><span class="kw">interface</span> <span class="fn">Developer</span> {</span></div>
-                    <div class="code-line"><span class="ln">2</span><span>  name: <span class="str">'Aman Chaudhary'</span>;</span></div>
-                    <div class="code-line"><span class="ln">3</span><span>  year: <span class="num">2</span><span class="op">nd</span> BTech;</span></div>
-                    <div class="code-line"><span class="ln">4</span><span>  focus: <span class="str">'DSA'</span> | <span class="str">'WebDev'</span>;</span></div>
-                    <div class="code-line"><span class="ln">5</span><span>}</span></div>
-                    <div class="code-line"><span class="ln">6</span><span></span></div>
-                    <div class="code-line"><span class="ln">7</span><span><span class="kw">const</span> <span class="fn">skills</span> = [</span></div>
-                    <div class="code-line"><span class="ln">8</span><span>  <span class="str">'React'</span>, <span class="str">'TypeScript'</span>,</span></div>
-                    <div class="code-line"><span class="ln">9</span><span>  <span class="str">'C++'</span>, <span class="str">'Python'</span>,</span></div>
-                    <div class="code-line"><span class="ln">10</span><span>  <span class="str">'DSA Patterns'</span></span></div>
-                    <div class="code-line"><span class="ln">11</span><span>];</span></div>
-                    <div class="code-line"><span class="ln">12</span><span></span></div>
-                    <div class="code-line"><span class="ln">13</span><span><span class="comment">// Currently learning...</span></span></div>
-                    <div class="code-line"><span class="ln">14</span><span><span class="kw">export</span> <span class="fn">default</span> <span class="var">Aman</span>; <span class="cursor-blink"></span></span></div>
-                </div>
-            </div>
-        </div>
+
     </section>
 
 
